@@ -24,6 +24,6 @@ class MovieController extends ChangeNotifier {
 
   void _loadMovieListWithGenre() async {
     movies = await _movieRepository.loadMovieListWithGenre(activeGenreId);
-    _loadMovieListWithGenre();
+    notifyListeners();
   }
 }
